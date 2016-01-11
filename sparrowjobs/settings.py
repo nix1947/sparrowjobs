@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jobs'
+    'tinymce',
+    'django_wysiwyg',
+    'jobs',
+    'companies',
+    'address',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -124,3 +128,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
         ('assets'),
     )
+
+DJANGO_WYSIWYG_FLAVOR = "tinymce"
+DJANGO_WYSIWYG_MEDIA_URL = STATIC_URL + "tinymce/"

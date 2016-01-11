@@ -37,9 +37,12 @@ class Job(models.Model):
 
 	def status(self):
 		if  (self.expire_at - timezone.now()).days <= 0:
-			return "expire"
+			return True
 		else:
-			return 'active'
+			return False
+
+	status.short_description = "Job status"
+	status.boolean = True
 
 	def __str__(self):
 		return	self.title
