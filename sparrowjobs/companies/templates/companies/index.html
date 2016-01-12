@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+{% load wysiwyg %}
+{% wysiwyg_setup %}
+
+<textarea id="foo"></textarea>
+
+{% wysiwyg_editor "foo" %}
+{% endblock content %}
