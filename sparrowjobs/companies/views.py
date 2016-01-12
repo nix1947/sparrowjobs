@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from .models import Company
 
-def index(request):
+def companies(request):
 	"""list all companies
 	"""
 	companies = Company.objects.all()
-	return render(request, 'companies/index.html', {'companies': companies})
+	return render(request, 'companies/companies.html', {'companies': companies})

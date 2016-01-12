@@ -16,22 +16,28 @@
   <body>
     {% include 'navbar.html'%}
     {% block content %}
-     <div class="jumbotron">
-        <div class="container">
-          <form action="">
-            <input type="text" name="" id="" class="form-control">
-          </form>
-        </div><!-- end container -->
-      </div><!-- end jumbotron -->
-    <div class="container">
-      <!-- Main component for a primary marketing message or call to action -->
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi dolores reprehenderit id voluptatibus! Veniam a nemo, voluptatibus consequatur nisi minima voluptate, doloremque. Aut dignissimos deleniti recusandae iusto, ducimus suscipit iure.</p>
-    </div> <!-- /container -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">LOGO Again</div>
+          <div class="col-md-6">Searchbar Adanve</div>
+          <div class="col-md-3">Employers</div>
+        </div> <!-- row -->
+        
+        <div class="row">
+          <div class="col-md-3">{% block job_count%} 100 sparrowjobs {% endblock job_count %}</div>
+          <div class="col-md-9">{% block email_alert %}Email alert {% endblock email_alert %}</div>
+        </div>
 
-    {% endblock content %}
+        <div class="row">
+          <div class="col-md-3">{% block left_sidebar%}{% endblock left_sidebar%}</div>
+          <div class="col-md-6">{% block center %}Center{% endblock center %}</div>
+          <div class="col-md-3">{% block right_sidebar %}{% endblock right_sidebar %}</div>
+          
+        </div><!-- end row -->
+    
+    </div><!-- end container -->
+  {% endblock content %}
+  {% include 'footer.html' %}
   {% include 'js.html' %}
-
-
-
   </body>
 </html>
