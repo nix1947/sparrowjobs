@@ -6,3 +6,7 @@ def companies(request):
 	"""
 	companies = Company.objects.all()
 	return render(request, 'companies/companies.html', {'companies': companies})
+
+
+def dashboard(request):
+	return render(request, 'dashboard/dashboard.html')

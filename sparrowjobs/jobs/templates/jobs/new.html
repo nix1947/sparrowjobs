@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block center %}
+<form action="" method="POST">
+	{% csrf_token %}
+	{{form|crispy}}
+	<input type="submit" value="Post Job" name="submit" class="btn btn-primary">
+</form>
+
+{% endblock center%}

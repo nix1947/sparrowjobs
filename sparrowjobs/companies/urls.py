@@ -4,5 +4,6 @@ from . import views
 app_name = "companies"
 
 urlpatterns = [
-	url(r'^$', views.companies, name="companies")
+	url(r'^dashboard/$', views.dashboard, name="dashboard"),
+	url(r'^$', views.companies, name="companies"),
 ]

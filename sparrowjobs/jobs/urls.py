@@ -5,4 +5,5 @@ app_name = "jobs"
 
 urlpatterns = [
 	url(r'^$', views.jobs, name="jobs"),
+	url(r'^new/$', views.new, name="new")
 ]

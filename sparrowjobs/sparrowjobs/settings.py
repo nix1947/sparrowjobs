@@ -45,10 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'debug_toolbar',
+    'coverage',
     'django_wysiwyg',
+    'crispy_forms',
     'jobs',
     'companies',
     'address',
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -139,3 +142,5 @@ STATICFILES_DIRS = (
 
 DJANGO_WYSIWYG_FLAVOR = 'ckeditor' 
 DJANGO_WYSIWYG_MEDIA_URL = STATIC_URL + "ckeditor/"
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

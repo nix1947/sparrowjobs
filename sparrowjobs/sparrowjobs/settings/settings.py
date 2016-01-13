@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
+    'crispy_forms',
     'django_wysiwyg',
     'jobs',
     'companies',
