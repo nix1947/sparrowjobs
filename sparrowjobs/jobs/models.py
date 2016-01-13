@@ -1,7 +1,9 @@
 from django.db import models
 from django.utils import timezone
+from core.models import TimeStampedModel
+from companies.models import Company
 
-class JobCategory(models.Model):
+class JobCategory(TimeStampedModel):
 	cat_name = models.CharField('job category name', max_length=255)
 	description = models.TextField()
 
@@ -13,7 +15,7 @@ class JobCategory(models.Model):
 
 	
 
-class Job(models.Model):
+class Job(TimeStampedModel):
 	
 	LEVEL=(
 		('entry', 'entry'),
@@ -32,9 +34,7 @@ class Job(models.Model):
 	salary	= models.CharField('Salary', max_length=255, default="negotiable")
 	expire_at = models.DateTimeField()
 	other_info = models.TextField('other information')
-	created_at = models.DateTimeField(auto_now_add=True, auto_now=False)
-	updated_at = models.DateTimeField(auto_now_add=False, auto_now=True)
-
+	company = models.ForeignKey(Company, default="")
 	def status(self):
 		if  (self.expire_at - timezone.now()).days <= 0:
 			return True
