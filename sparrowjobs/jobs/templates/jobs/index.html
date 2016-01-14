@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{# content from base.html#}
+{% block content %}
+<div class="container">  
+  {# Top Search bar #}
+  {% block searchbar %}
+    {% include 'jobs/jobsearch.html' %}
+  {% endblock searchbar %}
+
+
+  <div class="row top30">
+    {% block sidebar %}
+      <div class="row"></div>
+      {% include 'jobs/sidebar.html' %}
+    {% endblock sidebar %}
+
+    <div class="col-md-9">
+      {% block main_content %}    
+        {% include 'jobs/recentjobs.html' %}
+      {% endblock main_content %}
+        <hr>
+
+          {% block pagination %}
+            <ul class="pagination pagination-lg pull-right">
+              <li><a href="#">«</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+        
+        {% endblock pagination%}
+    </div><!-- col-md-9 -->
+  </div><!-- row -->
+</div><!-- container -->
+
+{% endblock content   %}

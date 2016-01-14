@@ -18,18 +18,7 @@
     {% include 'navbar.html'%}
     {% block content %}
       <div class="container">
-        <div class="row">
-          {% block searchbar %}
-          <div class="col-md-3">LOGO Again</div>
-          <div class="col-md-6">Searchbar Adanve</div>
-          <div class="col-md-3">Employers</div>
-          {% endblock searchbar %}
-        </div> <!-- row -->
-        
-        <div class="row">
-          <div class="col-md-3">{% block job_count%} 100 sparrowjobs {% endblock job_count %}</div>
-          <div class="col-md-9">{% block email_alert %}Email alert {% endblock email_alert %}</div>
-        </div>
+       
 
         <div class="row">
           <div class="col-md-3">{% block left_sidebar%}{% endblock left_sidebar%}</div>

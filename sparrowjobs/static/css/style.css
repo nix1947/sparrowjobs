@@ -1,3 +1,4 @@
+
 /* container length */
 
 @media (min-width: 1300px) {
@@ -84,9 +85,10 @@ body { font-family: 'Open Sans', sans-serif; }
 }
 
 .job-summary{
-	color: #777777;
-	line-height: 14px;
-}
+	color: #555555;
+	line-height: 18px;
+	text-align: left;
+	}
 
 .job-meta-data{
 	color: #F0AD4E;
@@ -103,6 +105,8 @@ body { font-family: 'Open Sans', sans-serif; }
 	font-color: #bbbbbb;
 	font-style: 20px;
 }
+
+
 
 .profile img{
 	width: 100px;
@@ -126,4 +130,74 @@ h4{
 	color: #337AB7;
 	font-size: 18px;
 	font-family: none;
+	padding-top: 5px;
+}
+
+.icon{
+	color: #337AB7;
+}
+
+
+ 
+
+ .button{
+ 
+ 	display: block;
+ 	padding: 8px;
+ 	border-radius: 3px;
+ 	width: 100px;
+ 	text-align: center;
+	color: #FFF;
+	background: #337AB7;
+ }
+
+ .button a{
+ 	text-decoration: none;
+ 	color: #FFF;
+
+
+ }
+
+ .button:hover{
+ 	text-decoration: none;
+ 	color: #FFF;
+ 	background: #1C3F94;
+
+
+ }
+
+ .space{
+ 	padding-right: 10px;
+ }
+
+ .red{
+ 	color: #FB5353;
+}
+
+ .blue{
+ 	color: #4C7AB7;
+ }
+
+.paragraph{
+	
+	padding-bottom: 10px;
+	
+	}
+
+.paragraph p{
+	line-height: 24px;
+	color: #555555;
+	text-align: left;
+	
+}
+
+.h5{
+	color: #333333;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.job-title{
+	text-transform: uppercase;
+	color: #B89A94;
 }

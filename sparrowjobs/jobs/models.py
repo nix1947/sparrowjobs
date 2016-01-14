@@ -35,12 +35,13 @@ class Job(TimeStampedModel):
 	expire_at = models.DateTimeField()
 	other_info = models.TextField('other information')
 	company = models.ForeignKey(Company, default="")
+	
 	def status(self):
-		if  (self.expire_at - timezone.now()).days <= 0:
+		if timezone.now() < self.expire_at:
 			return True
 		else:
 			return False
-
+			
 	status.short_description = "Job status"
 	status.boolean = True
 
