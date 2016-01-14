@@ -4,28 +4,27 @@
 					<div class="row">
 						<div class="col-md-6">
 							<small class="h5">Industry</small>
-							<p>Software Engineering</p>
+							<p>{{job.company.industry.name | title }}</p>
 
 							<small class="h5">Website</small>
-							<a href="http://xtermnepal.com">http://xtermnepal.com</a>
+							<a href="{{job.company.website}}">{{job.company.website}}</a>
 						</div><!-- end col-md-6 -->
 
 						<div class="col-md-6">
 							<small class="h5">Company size</small>
-							<p>10 - 15</p>
+							<p>{{job.company.company_size}}</p>
 
 							<small class="h5">Telephone</small>
-							<p>01-5006354</p>
+							<p>{{job.company.telephone}}</p>
 						</div><!-- end col-md-6-->
 				
 					</div><!-- row -->
 					<div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis animi ex alias, architecto amet, commodi dolore labore cupiditate in, et harum. Praesentium nesciunt tempora tenetur ex labore nobis asperiores unde.</p>
+					{{job.company.overview | safe }}
 				</div>
 
 				<h3 class="job-title">Why Join Us</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus qui reiciendis veritatis deserunt soluta tempore necessitatibus ipsa! Veniam laudantium officia consequuntur, vel dolorum sequi reiciendis? Hic et animi beatae. Sequi.</p>
-
+				{{job.company.why_jon_us | safe }}
 				
 				</div><!-- paragraph -->
 			</div><!-- end col-md-6 -->

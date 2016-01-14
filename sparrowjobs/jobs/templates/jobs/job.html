@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
-
 {% block content %}
+
+{% if job %}
+	
+
 
 <div class="container">
 	<div class="row">
@@ -13,52 +16,11 @@
 
 		<div class="col-md-7">
 			{% include 'jobs/company_header.html' %}
-
 		<div class="row">
 
-			<div class="col-md-6">
-				<div class="paragraph">
-					<h3 class="job-title">Job Description</h3>
-				
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores laboriosam aperiam aspernatur iste blanditiis, enim accusantium molestiae ut velit cum. Pariatur recusandae ab et quaerat, suscipit amet minima asperiores.</p>
-			
-				</div>
-					
-				<div class="paragraph">
-					<h3 class="job-title">Job Requirements</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, nihil mollitia ratione in libero! Provident iusto expedita, quae debitis architecto consequuntur odio optio. Reprehenderit laboriosam quos quasi eum vero ratione.</p>
-				</div>
+		{% include 'jobs/job_description.html' %}
 
-				<div class="paragraph">
-					<h3 class="job-title">Other Information</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, nihil mollitia rationelibero! Provident iusto expedita, quae debitis architecto consequuntur odio optio. Reprehenderit laboriosam quos quasi eum vero ratione.</p>
-				</div>
-			</div><!-- end col-md-6 -->
-
-			<div class="col-md-6">
-				<div class="paragraph">
-					<h3 class="job-title"> Job Overview</h3>
-					<div class="row">
-						<div class="col-md-6">
-							<small class="h5">Salary</small>
-							<p>Negotiable</p>
-
-							<small class="h5">Job Category</small>
-							<p>IT</p>
-						</div><!-- end col-md-6 -->
-
-						<div class="col-md-6">
-							<small class="h5">Expire at</small>
-							<p>21 june 2016</p>
-
-							<small class="h5">Total Vacencies</small>
-							<p>1</p>
-						</div><!-- end col-md-6-->
-				
-					</div>
-				
-				</div>
-			</div><!-- end col-md-6 -->
+		{% include 'jobs/job_overview.html' %}
 
 		
 			{% include 'jobs/company_overview.html'%}
@@ -81,6 +43,10 @@
 	</div><!-- row -->
 </div><!-- end container -->
 
+
+{% else %}
+	<h4>No job found</h4>
+{% endif %}
 {% endblock content %}
 
 

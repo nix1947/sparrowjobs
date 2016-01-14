@@ -38,12 +38,12 @@ class Job(TimeStampedModel):
 	
 	def status(self):
 		if timezone.now() < self.expire_at:
-			return True
+			return "Active"
 		else:
-			return False
+			return "Expired"
 			
 	status.short_description = "Job status"
-	status.boolean = True
+	# status.boolean = True
 
 	def __str__(self):
 		return	self.title
