@@ -1,53 +1,27 @@
 {% extends 'base.html' %}
-{% block title %} Jobs {% endblock title %}
+{% block content %}
 
+<div class="container">  
+  {% include 'jobs/jobsearch.html' %}
+  
+    <div class="row top30">
+    {% include 'jobs/sidebar.html' %}
+    <div class="col-md-9">
+      {% include 'jobs/recentjobs.html' %}
+      <hr>
+    
+      <ul class="pagination pagination-lg pull-right">
+        <li><a href="#">«</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+      
+    </div><!-- col-md-9 -->
+  </div><!-- row -->
+</div><!-- container -->
 
-{% block left_sidebar %}
-	<h3>Search Criteria</h3>
-		<form action="" method="POST">
-	 		<div class="form-group">
-   			<input type="text" class="form-control" placeholder="Search">
-  		</div>
-  		<button type="submit" class="btn btn-default">Submit</button>
-		</form>
-
-		
-	</form><!-- endform -->
-{% endblock left_sidebar%}
-
-{% block center %}
-	<div class="row">
-		<div class="col-md-6">Position</div>
-		<div class="col-md-2">Location</div>
-		<div class="col-md-2">Date</div>
-		<div class="col-md-2">Company</div>
-		<hr>
-	</div>
-
-
-	{% for job in jobs %}
-		<div class="row">
-			
-			<div class="col-md-6">
-				<h3><a href="">{{job.title}}</a></h3>
-			</div><!-- col-md-6-->
-					
-			<div class="col-md-2">
-				{{job.location}}
-			</div> <!-- col-md-2 -->
-
-			<div class="col-md-2">
-				{{job.updated_at}}
-			</div>
-
-			<div class="col-md-2">
-				<img src="http://placehold.it/80X40" alt="">
-			</div>
-		
-		
-
-	</div> <!-- row -->
-
-	{% endfor %}
-	
-{% endblock center %}
+{% endblock content%}

@@ -1,4 +1,10 @@
+/* container length */
 
+@media (min-width: 1300px) {
+  .container {
+    width: 1270px;
+  }
+}
 
 .navbar-default{
 	background-color: #1C3F94;
@@ -29,4 +35,95 @@
 .navbar-default .navbar-brand{
 	color: #ffffff;
 	text-transform: uppercase;
+}
+
+/* jobs.html page styles only */
+
+/* CSS used here will be applied after bootstrap.css */
+
+.top30 { margin-top:30px; }
+
+body { font-family: 'Open Sans', sans-serif; }
+
+.pagetitle {border-bottom:1px solid #cccccc; padding-bottom:30px; margin-bottom:30px;}
+
+#jobs td {
+    padding: 20px 10px;
+}
+
+.job-location {text-align:right;}
+
+.company-name{
+	font-weight: bold;
+}
+/* end jobs.html pages style */
+
+.job-list{
+	border: 1px solid #bbbbbb;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.job-title a {
+	text-decoration: none;
+	color: #5282B7;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.company-title {
+	text-decoration: none;
+	color: #777777;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.company-title p {
+	margin-bottom: 3px;
+}
+
+.job-summary{
+	color: #777777;
+	line-height: 14px;
+}
+
+.job-meta-data{
+	color: #F0AD4E;
+}
+
+.job-list button{
+		width: 120px;
+		height: 40px;
+		background: #1C3F94;	
+		border-style: none;
+}
+
+.h3{
+	font-color: #bbbbbb;
+	font-style: 20px;
+}
+
+.profile img{
+	width: 100px;
+	height: 100px;
+	border-radius: 3px;
+}
+
+.job-list .col-md-2{
+	margin-right: 0px;
+}
+
+.job-list button:hover{
+	background: #1C3F94;
+}
+
+.job-list button{
+	background: #337AB7;
+}
+
+h4{
+	color: #337AB7;
+	font-size: 18px;
+	font-family: none;
 }
