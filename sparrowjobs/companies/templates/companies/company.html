@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3> <img src="http://placehold.it/100X100" alt="{{company.name}}" style="padding-right:50px;">{{company.name}}</h3>
+      <!-- Nav tabs -->
+      <div>
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#overview" aria-controls="home" role="tab" data-toggle="tab">Overview</a></li>
+          <li role="presentation"><a href="#jobs" aria-controls="profile" role="tab" data-toggle="tab">Jobs</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="overview">
+            <div class="row">
+              <div class="col-md-7">
+                <h4>Company Overview</h4>
+                <article class="overview">
+                  {{company.overview}}
+                 </article>
+                <h4>Company Description</h4>
+                <article class="overview">
+                  {{company.description}}
+                </article>
+                <h4>Why Join Us</h4>
+                <article class="overview">
+                  {{company.why_jon_us}}
+                </article>
+              </div><!-- col-md-6-->
+              <div class="col-md-5">
+              <h3>Company Snapshot</h3>
+              <div>
+                <div class="company-title">Industry</div>
+                <div style="padding:5px;">{{company.industry}}</div>
+
+                <div class="company-title">Company Size</div>
+                <div style="padding:5px;">{{company.company_size}}</div>
+
+                <div class="company-title">Company Website</div>
+                <div style="padding:5px;"><a href="{{company.website}}">{{company.website}}</a></div>
+
+                <div class="company-title">Company Phone</div>
+                <div style="padding:5px;">{{company.telephone}}</div>
+
+                <div class="company-title">Address</div>
+                <div style="padding-left: 15px;">
+                  <ul class="list-unstyled">
+                    <li><strong>Country:</strong> {{company.address.country}}</li>
+                    <li><strong>State:</strong> {{company.address.state}}</li>
+                    <li><strong>City:</strong> {{company.address.city}}</li>
+                    <li><strong>Address1: </strong>{{company.address.address1}}</li>
+                    <li><strong>Address2:</strong>{{company.address.address2}}</li>
+                    <li><strong>Address3:</strong>{{company.address.address3}}</li>
+                  </ul>
+                </div>
+                
+              </div>
+              </div><!--col-md-6-->
+            </div><!-- row -->
+          </div><!-- end overview tab-panel -->
+          <div role="tabpanel" class="tab-pane" id="jobs">
+          <h4>Active Jobs</h4>
+          {% if active_jobs %}
+            {% for job in active_jobs %}
+              <div class="row job-list">
+               <div class="col-md-8">
+                <p class="job-title"><a href="{% url 'jobs:job' job.id %}">{{job.title | title }}</a></p>
+                <p class="company-title">Job Summary</p>
+                <p class="job-summary">{{job.summary | slice:":255" }}</p>
+                <p class="job-meta-data">Job Level: {{job.job_level | title}} | Views: 836 | Deadline: {{job.expire_at | date }} </p>
+              </div><!-- end col-md-8 -->
+              <button class="button btn btn-primary">Apply</button>
+            {% endfor %}
+          {% endif %}
+          </div><!-- jobs -->
+          </div>
+        </div>
+      </div>
+    </div><!-- col-md-10-->
+  </div>
+</div>
+
+
+{% endblock content %}

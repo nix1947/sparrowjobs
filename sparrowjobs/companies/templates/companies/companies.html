@@ -1,3 +1,40 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">Put your Add here</div>
+    <div class="col-md-8">
+      {% if companies %}
+        {% for company in companies %}
+          <div class="row" style="padding-bottom:20px;">
+            <div class="col-md-2">
+              <div>
+                 <a href="{% url 'companies:company' company.id %}" class="profile"><img src="http://placehold.it/100X100" alt=""></a>
+              </div>
+            </div><!-- col-md-2 -->
+            <div class="col-md-8">
+             <h4 style="padding-left:20px;">
+             <a style="text-decoration:none;" href="{% url 'companies:company' company.id %}">{{company.name}}
+             </a>
+             </h4>
+             <div>
+               <span class="glyphicon glyphicon-map-marker" style="padding-right: 20px; color:#FB5353;"><span class="company-title" style="padding-left: 20px;">{{company.address}}</span>
+             </div>
+             <div>
+               <span class="glyphicon glyphicon-map-marker" style="padding-right: 20px;"></span><span>{{company.address}}</span>
+             </div>
+            </div><!-- col-md-8-->
+            <div class="col-md-2">
+              <a href="{% url 'companies:company' company.id %}" class="btn btn-primary"> Find Out More</a>
+            </div>
 
+          </div><!-- row -->
+          <hr>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="col-md-2">Right sidebar</div>
+  </div>
+</div>
+
+{% endblock content %}

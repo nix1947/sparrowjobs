@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{# base page for the companies app companies dict will come #}
+
+{% block content %}
+
+  
+  <div class="container">
+
+
+    <div class="row">
+      {% include 'companies/leftsidebar.html' %}
+      {% include 'companies/content.html' %}
+      {% include 'companies/rightsidebar.html' %}
+    </div>
+  </div>
+{% endblock content %}

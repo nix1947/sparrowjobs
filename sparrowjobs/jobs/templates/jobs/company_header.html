@@ -1,41 +1,25 @@
-<div class="row">
+<div class="company-banner">
+	<img src="http://placehold.it/750X200" class="img-responsive" alt="{{job.company.name}}">
+	<hr>
+</div><!-- company-banner -->
 
-	<div class="col-md-12">
-		<img class="img-responsive" src="http://placehold.it/720X240" alt="{{job.company.name}}">
-	</div><!-- col-md-12 -->
-</div><!-- row -->
+<div>
+	<div class="row">
+		<div class="col-md-3">
+			<a href="#" class="profile"><img class="profile"src="http://placehold.it/100X100" alt="{{job.company.name}}"></a> <!--company-logo -->
+		</div> <!-- company logo col-md-3 -->
+		
+		<div class="col-md-6">
+			<h3>{{job.title | title }}</h3>
+			<h4>{{job.company.name | title }}</h4>
+		</div><!-- col-md-6-->
 
-<hr>
-
-<div class="row">
-	<div class="col-md-3">
-		<a class="profile" href=""><img  src="http://placehold.it/100X100" alt="{{job.company.name}}"></a>
-	</div><!-- col-md-3 company Logo-->
-
-	<div class="col-md-6">
-		<h3 class="job-title">{{job.title | title 	}}</h3>
-			<p class="company-title">{{job.company.name | title }}</p>
-	</div>
-
-	<div class="col-md-3"> 
-
-		<h5 class="company-title  pull-right"> <span class="space red glyphicon glyphicon-map-marker"></span>{{job.location | title }}</h5><br>
-
-
-		<div class="button pull-right">
-			<a href="#">Apply</a>
+		<div class="col-md-3 vertical-list">
+			<ul class="pull-right">
+				<li><a href="#" class="btn btn-primary ">Apply</a></li>
+				<li><span class="glyphicon glyphicon-briefcase" style="color:#337AB7; padding-right:5px;"></span>{{job.job_level}}</li>
+				<li><span class="glyphicon glyphicon-map-marker" style="color:#FB5353; padding-right:5px;"></span>{{job.location}}</li>
+			</ul>
 		</div>
-
-		<br>
-		
-		
-		<h5 class="company-title  pull-right"> <span class="glyphicon blue glyphicon-briefcase space"></span>{{job.job_level | title }}</h5><br>
-
-
-
-			
-				
-	</div><!-- col-md -3-->	
-</div><!-- end row -->
-		
-<!-- end of company header -->
+	</div><!-- row -->
+</div>

@@ -1,11 +1,7 @@
 
 /* container length */
 
-@media (min-width: 1300px) {
-  .container {
-    width: 1270px;
-  }
-}
+
 
 .navbar-default{
 	background-color: #1C3F94;
@@ -104,7 +100,9 @@ body { font-family: 'Open Sans', sans-serif; }
 .h3{
 	font-color: #bbbbbb;
 	font-style: 20px;
+
 }
+
 
 
 
@@ -127,10 +125,12 @@ body { font-family: 'Open Sans', sans-serif; }
 }
 
 h4{
-	color: #337AB7;
+	color: #949494;
 	font-size: 18px;
-	font-family: none;
 	padding-top: 5px;
+	padding-bottom: 5px;
+	
+
 }
 
 .icon{
@@ -184,10 +184,11 @@ h4{
 	
 	}
 
-.paragraph p{
+.paragraph div{
 	line-height: 24px;
 	color: #555555;
-	text-align: left;
+	text-align: right;
+
 	
 }
 
@@ -197,7 +198,42 @@ h4{
 	font-size: 15px;
 }
 
-.job-title{
+
+
+.vertical-list ul li{
+	list-style: none;
+	padding: 5px;
+}
+
+.vertical-list ul li a{
+	text-decoration: none;
+	color: #FFF;
+}
+
+.vertical-list ul li a:hover{
+	background: #1C3F94;
+}
+
+article{
+	text-align: justify;
+	color: #222222;
+	font-style: Georgia;
+	line-height: 20px;
+	padding: 10px;
+
+}
+
+
+h3{
 	text-transform: uppercase;
 	color: #B89A94;
+}
+
+
+.navbar-default{
+	color: red;
+}
+
+.overview{
+	padding: 50px;
 }

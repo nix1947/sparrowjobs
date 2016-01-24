@@ -1,52 +1,28 @@
-{% extends 'base.html' %}
+{%  extends 'base.html' %}
+
 {% block content %}
-
-{% if job %}
-	
-
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-2">
-			{% block left_sidebar %}
-				<h4>Hot jobs will be here</h4>
-			{% endblock left_sidebar%}
-		</div><!-- col-md-3 left-sidebar -->
+	<div class="col-md-2">
+		<h4>Hot Jobs</h4>
+	</div><!-- col-md-2-->
+
+	<div class="col-md-8">
+		{% include 'jobs/company_header.html'%}
+		{% include 'jobs/job_description.html'%}
+
+	</div><!-- col-md-8-->
+
+	<div class="col-md-1">
+		<h4>Advertisements</h4>
+	</div><!-- col-md-2 -->
+</div>
+	
+</div>
 
 
-		<div class="col-md-7">
-			{% include 'jobs/company_header.html' %}
-		<div class="row">
-
-		{% include 'jobs/job_description.html' %}
-
-		{% include 'jobs/job_overview.html' %}
-
-		
-			{% include 'jobs/company_overview.html'%}
 
 
-		</div>
 
-		<div class="row">
-			{% include 'jobs/company_address.html' %}
-		</div>
-
-
-		</div><!-- col-md-7 -->
-
-
-	<div class="col-md-3">
-			<h4>Advertisement will be here</h4>
-		</div><!-- col-md3 right_sider -->
-
-	</div><!-- row -->
-</div><!-- end container -->
-
-
-{% else %}
-	<h4>No job found</h4>
-{% endif %}
 {% endblock content %}
-
-

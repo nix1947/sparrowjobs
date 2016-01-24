@@ -1,20 +1,65 @@
-<div class="col-md-6">
-	<div class="paragraph">
-		<h3 class="job-title">Job Description</h3>
-		<p>
-			{{job.description | safe }}
-		</p>	
-	</div>
-					
-	<div class="paragraph">
-		<h3 class="job-title">Job Requirements</h3>
-		
-			{{job.requirements | safe }}
-	
-	</div>
+<div class="row">
+	<div class="col-md-8">
+		<h4>Job Summary </h4>
+		<article>
+			{{job.summary | safe }}
+		</article>
 
-	<div class="paragraph">
-		<h3 class="job-title">Other Information</h3>
-			{{ job.other_info | safe }}
-	</div>
-</div><!-- end col-md-6 -->
+		<h4>Job Description </h4>
+		<article>
+			{{job.summary | safe }}
+		</article>
+
+		<h4>Job Description </h4>
+		<article>
+			{{job.requirements | safe }}
+		</article>
+
+			<h4>Other Information</h4>
+		<article>
+			{{job.requirements | safe}}
+		</article>
+
+		<h4>Why Join Us</h4>
+		<article>
+			{{job.company.why_jon_us | safe}}
+		</article>
+	</div><!-- col-md-8-->
+	<div class="col-md-4">
+		<h4>Job Info </h4>
+			<div class="row">
+				<div class="col-md-12">
+					<h6 class="company-title">Job Category: {{job.category | title}}</h6>
+					<h6 class="company-title">Salary: {{job.salary | title }}</h6>
+					<h6 class="company-title">Required: {{job.vacencies | title}}</h6>
+					<h6 class="company-title">Status: <span style="color:#FB5353; padding-right:5px;">{{job.status|title }}</span></h6>
+					<h6 class="company-title">Expiry Date: <span style="color:#FB5353; padding-right:5px;">{{job.expire_at | date }}</span></h6>
+					<h6 class="company-title">Job Location: {{job.location | title}}</h6>
+				</div><!-- col-md-12-->
+			</div><!-- row -->
+	</div><!-- col-md-4 -->
+	
+	<div class="col-md-4">
+		<h4>Company Overview</h4>
+			<div class="row">
+				<div class="col-md-12">
+					<h6 class="company-title">Industry: {{job.company.industry | title}}</h6>
+					<h6 class="company-title">Website: <a href="{{job.company.website}}">{{job.company.website }}</a></h6>
+					<h6 class="company-title">Company Size: {{job.company.company_size | title}}</h6>
+					<h6 class="company-title">Telephone No. <span style="color:#FB5353; padding-right:5px;">{{job.company.telephone|title }}</span></h6>
+					<h6 class="company-title">Expiry Date: <span style="color:#FB5353; padding-right:5px;">{{job.expire_at | date }}</span></h6>
+				</div><!-- col-md-12-->
+			</div><!-- row -->
+	</div><!-- col-md-4 -->
+
+	<div class="col-md-4">
+		<h4>Company Overview</h4>
+			<div class="row">
+				<div class="col-md-12">
+					<article>
+						{{job.company.overview | safe }}
+					</article>
+				</div><!-- col-md-12-->
+			</div><!-- row -->
+	</div><!-- col-md-4 -->	
+</div><!-- row -->

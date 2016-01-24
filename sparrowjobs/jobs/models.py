@@ -1,9 +1,18 @@
+"""Job App
+It is the app models for job a single entity
+Created: 2015 dec 25
+Updated: 2016 jan 19
+"""
+
 from django.db import models
 from django.utils import timezone
 from core.models import TimeStampedModel
 from companies.models import Company
 
 class JobCategory(TimeStampedModel):
+	"""
+	Job category models 
+	"""
 	cat_name = models.CharField('job category name', max_length=255)
 	description = models.TextField()
 
@@ -16,6 +25,9 @@ class JobCategory(TimeStampedModel):
 	
 
 class Job(TimeStampedModel):
+	"""
+	Job models itself
+	"""
 	
 	LEVEL=(
 		('entry', 'entry'),
@@ -35,8 +47,18 @@ class Job(TimeStampedModel):
 	expire_at = models.DateTimeField()
 	other_info = models.TextField('other information')
 	company = models.ForeignKey(Company, default="")
+
+	def __str__(self):
+		return	self.title
+
+
 	
 	def status(self):
+		"""Return the status of a job expire or active
+		>>>Job.status()
+		Expired
+		"""
+
 		if timezone.now() < self.expire_at:
 			return "Active"
 		else:
@@ -45,11 +67,9 @@ class Job(TimeStampedModel):
 	status.short_description = "Job status"
 	# status.boolean = True
 
-	def __str__(self):
-		return	self.title
+	
 
 
 
 
-
-
+	

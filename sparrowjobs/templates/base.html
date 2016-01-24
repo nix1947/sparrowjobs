@@ -17,20 +17,8 @@
   <body>
     {% include 'navbar.html'%}
     {% block content %}
-      <div class="container">
-       
-
-        <div class="row">
-          <div class="col-md-3">{% block left_sidebar%}{% endblock left_sidebar%}</div>
-          <div class="col-md-6">{% block center %}Center{% endblock center %}</div>
-          <div class="col-md-3">{% block right_sidebar %}{% endblock right_sidebar %}</div>
-          
-        </div><!-- end row -->
-  
-    
-    </div><!-- end container -->
-  {% endblock content %}
-  {% include 'footer.html' %}
-  {% include 'js.html' %}
+    {% endblock content %}
+    {% include 'footer.html' %}
+    {% include 'js.html' %}
   </body>
 </html>
